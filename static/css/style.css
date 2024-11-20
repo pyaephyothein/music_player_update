@@ -1,0 +1,258 @@
+body {
+    background-image: url("../images/freepik__candid-image-photography-natural-textures-highly-r__71570.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+.firstContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.meuContainer {
+    margin-top: 15px;
+}
+
+.menu {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #9e6b06;
+    padding: 3px 20px;
+}
+
+.menu:hover {
+    text-decoration: underline;
+}
+
+.logInContainer {
+    margin-top: 15px;
+    margin-right: 50px;
+    font-size: 20px;
+
+}
+
+.logIn {
+    color: white;
+    text-decoration: none;
+    border: 2px solid #9e6b06;
+    padding: 3px 20px;
+}
+
+.logIn:hover {
+    text-decoration: underline;
+}
+.textContaier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.text {
+    font-size: 40px;
+    color: #D9BD6A;
+    margin-bottom: -20px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+    
+
+
+.resultText {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 0; /* Center horizontally and adjust top margin */
+    text-align: center;
+}
+
+.inputWapper {
+    position: relative;
+    width: 100%;
+}
+
+.autocompleteInput {
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 10px 35px 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255,0.9);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b6df4;
+    pointer-events: none;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.playList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    background-color: rgba(222, 192, 240, 0.4);
+    opacity: 80%;
+    border-radius: 50px;
+    
+    
+}
+.Music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(222, 192, 240, 0.4);
+    width: 100%;
+    height: 100vh;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.trackItem {
+    color: #FF6836;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    cursor: pointer;
+    user-select: none;
+    
+
+}
+
+.photos{
+    
+    border: none;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: -2px -2px 2px rgb(30, 30, 30,0.1);
+    overflow: hidden;
+}
+
+#playingTime {
+    color: gold;
+    margin-bottom: 10px;
+
+}
+#progressBar {
+    width: 500px;
+    height: 15px;
+    background-color: gold;
+    border-radius: 10px;
+
+}
+#currentProgress {
+    width: 0px;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.control {
+    font-size: 30px;
+    color: gold;
+    margin: 20px 40px;
+    cursor: pointer;
+    
+}
+
+.repeatAndShfell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 400px;
+}
+
+.controlOne {
+    font-size: 20px;
+    color: gold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .firstContainer {
+        flex-direction: column; /* Stack the menu and login buttons on small screens */
+        align-items: center;
+    }
+
+    .menu {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .logInContainer {
+        margin-top: 10px;
+    }
+
+    .resultText {
+        margin-top: 100px; /* Adjust for smaller screens */
+        width: 90%; /* Make the result container take up more space */
+        max-width: none;
+    }
+
+    .autocompleteInput {
+        font-size: 1rem; /* Increase font size for smaller screens */
+        padding: 10px;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 1.2rem; /* Increase icon size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        font-size: 16px; /* Further reduce font size on very small screens */
+    }
+
+    .logIn {
+        font-size: 16px;
+    }
+
+    .autocompleteInput {
+        padding: 8px 30px 8px 10px; /* Adjust padding for mobile */
+    }
+
+    .fa-magnifying-glass {
+        font-size: 1rem; /* Adjust icon size on very small screens */
+    }
+}
