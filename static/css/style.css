@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/freepik__candid-image-photography-natural-textures-highly-r__71570.jpeg");
+    background-image: url("../images/awds.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -206,6 +206,44 @@ body {
     color: gold;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.logInPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formControlContainer {
+    margin-top: 200px;
+}
+h3.white {
+    color: white;
+
+}
+h3.whiteOne {
+    color: white;
+}
+.buttomLoginandSignup {
+    margin-top: 30px;
+}
+
+.logInForm {
+    width: 300px;
+    height: 40px;
+}
+.logInFormOne {
+    width: 300px;
+    height: 40px;
+}
+
+.buttomdiv {
+    width: 120px;
+    border: none;
+    border-radius: 30px;
+    height: 35px;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
