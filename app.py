@@ -39,11 +39,6 @@ def artist():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        # Implement login logic here
-        return redirect(url_for('home'))
     return render_template("login.html")
 
 # API route to fetch track data dynamically
