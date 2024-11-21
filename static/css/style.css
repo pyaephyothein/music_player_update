@@ -17,7 +17,8 @@ body {
 }
 
 .meuContainer {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .menu {
@@ -109,104 +110,120 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    
+    padding: 20px;
+    box-sizing: border-box;
+}
+.resultContainer {
+    width: 100%;
+    max-width: 300px; 
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 250px; 
+    overflow-y: auto; 
+    display: none; 
 }
 .playList {
+    width: 45%; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 80%;
-    border-radius: 50px;
-    
-    
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+.playList:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 .Music {
+    width: 45%; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 100%;
-    height: 100vh;
-    border-radius: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(232, 213, 244, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Music:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 .trackItem {
-    color: #ffffff;
-    font-size: 20px;
-    border-bottom: 1px solid gray;
-    padding: 10px 0px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     user-select: none;
-    
-
+}
+.trackItem:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight track on hover */
 }
 
-.photos{
-    
-    border: none;
-    width: 400px;
-    height: 400px;
-    margin-bottom: 30px;
-    border-radius: 30px;
-    
+.photos {
+    width: 100%;
+    max-width: 350px; /* Slightly smaller for balance */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 .images {
     width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    box-shadow: -2px -2px 2px rgb(30, 30, 30,0.1);
-    overflow: hidden;
+    height: auto;
+    border-radius: 20px;
 }
 
 #playingTime {
     color: gold;
     margin-bottom: 10px;
-
+    font-size: 1rem;
 }
+
+/* Progress Bar */
 #progressBar {
-    width: 500px;
+    width: 100%;
+    max-width: 450px; /* Adjust the size of the progress bar */
     height: 15px;
     background-color: gold;
     border-radius: 10px;
-
+    margin: 20px 0;
 }
+
 #currentProgress {
-    width: 0px;
+    width: 0;
     height: 100%;
     background-color: white;
     border-radius: 10px;
 }
 
+/* Player Controls */
 .control {
-    font-size: 30px;
+    font-size: 1.8rem;
     color: gold;
-    margin: 20px 40px;
+    margin: 10px;
     cursor: pointer;
-    
 }
 
 .repeatAndShfell {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    cursor: pointer;
-    width: 400px;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
 }
 
 .controlOne {
-    font-size: 20px;
+    font-size: 1.3rem;
     color: gold;
-    margin-bottom: 10px;
-    cursor: pointer;
 }
+
 
 .logInPageContainer {
     display: flex;
@@ -216,7 +233,7 @@ body {
 }
 
 .formControlContainer {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 h3.white {
     color: white;
@@ -246,51 +263,98 @@ h3.whiteOne {
     font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    .firstContainer {
-        flex-direction: column; /* Stack the menu and login buttons on small screens */
+/* Responsive Design: Media Queries */
+@media only screen and (max-width: 1024px) {
+    /* Tablet and smaller desktop adjustments */
+    .container {
+        flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+    .playList, .Music {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #progressBar {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For tablets and small devices */
+    .firstContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menuContainer {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .menu {
         margin: 10px 0;
-        font-size: 18px;
+        font-size: 0.9rem;
     }
 
-    .logInContainer {
-        margin-top: 10px;
-    }
-
-    .resultText {
-        margin-top: 100px; /* Adjust for smaller screens */
-        width: 90%; /* Make the result container take up more space */
-        max-width: none;
-    }
-
-    .autocompleteInput {
-        font-size: 1rem; /* Increase font size for smaller screens */
-        padding: 10px;
+    .photos {
+        max-width: 300px;
     }
 
     .fa-magnifying-glass {
-        font-size: 1.2rem; /* Increase icon size on smaller screens */
+        right: 10px;
+    }
+
+    .autocompleteInput {
+        font-size: 0.8rem;
+    }
+
+    .control {
+        font-size: 1.5rem;
+    }
+
+    #progressBar {
+        width: 80%;
     }
 }
 
-@media (max-width: 480px) {
-    .menu {
-        font-size: 16px; /* Further reduce font size on very small screens */
+@media only screen and (max-width: 480px) {
+    /* For phones and smaller screens */
+    .menuContainer {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .logIn {
-        font-size: 16px;
+    .menu {
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 
     .autocompleteInput {
-        padding: 8px 30px 8px 10px; /* Adjust padding for mobile */
+        font-size: 0.75rem;
     }
 
-    .fa-magnifying-glass {
-        font-size: 1rem; /* Adjust icon size on very small screens */
+    .photos {
+        max-width: 250px;
+    }
+
+    .control {
+        font-size: 1.2rem;
+    }
+
+    .repeatAndShfell {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #progressBar {
+        width: 75%;
+    }
+
+    #playingTime {
+        font-size: 0.9rem;
     }
 }
